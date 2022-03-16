@@ -1,58 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
-
-* {
-  box-sizing: border-box;
-}
-body {
-  background: white !important;
-  min-height: 100vh;
-  display: flex;
-  font-weight: 400;
-  font-family: 'Fira Sans', sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6,label,span {
-  font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
-}
-
-body, html, .App, #root, .auth-wrapper {
-  width: 100%;
+html, body {
   height: 100%;
+  margin: 0;
 }
 
-.navbar-light {
-  background-color: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;  
 }
 
-.SignIn {
-  display: flex;
-  justify-content: center;
-  margin-top: 5rem;
+.moon-gradient {
+  background-color: #cbdcef;
+  background-image: linear-gradient(210deg, #cbdcef 0%, #7719da 100%);
 }
-input {
-  display: block;
-  width: 20rem;
-  height: 2rem;
-  padding: 0.5rem;
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
-button {
-  border: none;
-  padding: 1rem;
-  width: 21.2rem;
-  font-size: 1.2em;
-  border-radius: 0.2rem;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #c5c5c5;
-}
-.message {
-  font-size: 1.2em;
-  text-align: center;
-  color: #36a936;
+
+.my-container {
+  position: absolute;
+  top: 3.8rem;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }

@@ -1,48 +1,37 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { MDBNavbar, MDBContainer, MDBBtn, MDBNavbarBrand} from 'mdb-react-ui-kit'
 
 function Navigation() {
+  const navigate = useNavigate(); 
+
   return (
     <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <div className="container">
+      <MDBNavbar light bgColor="light" className="p-10 gap-3 ">
+        <MDBContainer fluid>
+          <MDBNavbarBrand tag="span" className="mb-0 h1">
           <NavLink className="navbar-brand" to="/">
             MoonDeal
           </NavLink>
-          <div>
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/">
-                  MoonDeal
-                  <span className="sr-only">(current)</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
-                  About
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                  Contact
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/blog">
-                  Blog
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/signin">
-                  Sign in
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+          </MDBNavbarBrand>
+
+          <MDBBtn
+            outline
+            color="dark"
+            type="button"
+            size="sm"
+            className="mx-2 w-auto d-flex"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/signin")
+            }}
+          >
+            Sign In
+          </MDBBtn>
+        </MDBContainer>
+      </MDBNavbar>
     </div>
   );
 }
 
-export default Navigation;
+export default Navigation; 
