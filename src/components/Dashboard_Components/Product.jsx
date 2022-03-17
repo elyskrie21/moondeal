@@ -13,7 +13,7 @@ function Product(props) {
     <MDBCol>
       <MDBCard>
         <MDBCardImage
-          src="https://mdbootstrap.com/img/new/standard/city/041.webp"
+          src={props.src}
           alt="..."
           position="top"
         />

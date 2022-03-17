@@ -119,6 +119,7 @@ function Dashboard() {
                         productName={item.productName}
                         productPrice={item.productPrice}
                         url={item.url}
+                        src={item.img}
                       />
                     );
                   })}
