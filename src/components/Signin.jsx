@@ -38,8 +38,8 @@ function Signin() {
       if (resJson.success) {
         setUsername("");
         setPassword("");
-        setMessage("User created successfully");
-        connectToExtension(); 
+        setMessage("User logged in successfully");
+        // connectToExtension(resJson.token); 
 
         localStorage.setItem("token", resJson.token);
         navigate("/dashboard");
