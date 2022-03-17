@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { Navigation } from "./index";
+import { connectToExtension } from "../repository";
 import { MDBInput, MDBBtn, MDBIcon} from "mdb-react-ui-kit";
 
 function Signin() {
@@ -38,6 +39,7 @@ function Signin() {
         setUsername("");
         setPassword("");
         setMessage("User created successfully");
+        connectToExtension(); 
 
         localStorage.setItem("token", resJson.token);
         navigate("/dashboard");
