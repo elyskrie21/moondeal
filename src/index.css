@@ -19,3 +19,48 @@ body {
   bottom: 0px;
   left: 0px;
 }
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body > p {
+ flex-grow: 1;
+}
+
+.card-img {
+  max-height:10rem;
+  max-width: 15rem;
+  width:auto;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.leave {
+  color: black;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.see {
+  border: 2px solid red;
+}
+
+
+
+/* *media queries */
+@media screen and (max-width: 575px) {
+  .full-screen {
+    height: auto;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+}
