@@ -1,68 +1,53 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { logout } from "../../repository";
 import { useNavigate } from "react-router-dom";
 
 function Sidenav() {
   const navigate = useNavigate();
+
   return (
-    <div className="col-sm-auto sticky-top moon-gradient">
+    <div className="col-2 sticky-top moon-gradient">
       <div className="d-flex flex-sm-column flex-row flex-nowrap bg-transparent align-items-center sticky-top full-screen">
           <div>
-              <p className="h2">MoonDeal</p>
+              <p className="logo">Moon Deals</p>
           </div>
-        <ul className="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
-          <li className="nav-item">
+        <ul className="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto px-3">
+          <li className="nav-item nav-li">
             <a
               href="/"
-              className="d-flex align-items-center justify-content-center p-3 link-dark"
+              className="link-dark"
             >
-              <i className="fa-solid fa-house icon"></i>
+              <p className=""><i className="fa-solid fa-house icon"></i>Products</p>
             </a>
           </li>
-          <li className="">
+          <li className="nav-li">
             <a
               href="/"
-              className="d-flex align-items-center justify-content-center p-3 link-dark"
+              className="link-dark"
             >
-              <i className="fa-solid fa-gauge icon"></i>
+              <p className=""><i className="fa-solid fa-gear icon"></i>Settings</p>
             </a>
           </li>
-          <li>
+          <li className="nav-li">
             <a
               href="/"
-              className="d-flex align-items-center justify-content-center p-3 link-dark"
+              className="link-dark"
             >
-              <i className="fa-solid fa-table icon"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              className="d-flex align-items-center justify-content-center p-3 link-dark"
-            >
-              <i className="fa-solid fa-heart icon"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              className="d-flex align-items-center justify-content-center p-3 link-dark"
-            >
-              <i className="fa-solid fa-user icon"></i>
+              <p><i className="fa-solid fa-star icon"></i>Premium</p>
             </a>
           </li>
         </ul>
-        <div className="pb-3">
+        <div className="pb-3 nav-li">
           <a
             href="!#"
             className="d-flex align-items-center justify-content-center p-3 link-dark"
             onClick={(e) => {
               e.preventDefault();
               logout();
-              navigate("/");
+              navigate("/signin");
             }}
           >
-            <i class="fa-solid fa-right-from-bracket icon leave"></i>
+            <p><i class="fa-solid fa-right-from-bracket icon leave"></i>Sign Out</p>
           </a>
         </div>
       </div>

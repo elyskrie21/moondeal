@@ -1,6 +1,7 @@
 export function logout() {
   try {
-    localStorage.removeItem("token");
+    localStorage.clear()
+    window.location.pathname('/signin')
   } catch (err) {}
 }
 
@@ -23,4 +24,8 @@ export function connectToExtension(token) {
   );
 
   console.log('script ended')
+}
+
+export function isAuthenticated() {
+  return localStorage.getItem("token") != null; 
 }

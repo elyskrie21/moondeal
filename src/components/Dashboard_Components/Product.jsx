@@ -3,7 +3,7 @@ import React from "react";
 
 function Product(props) {
   return (
-    <div className="col-3 pb-5">
+    <div className="col-2 pb-5">
       <div class="card h-100">
         <img class="card-img-top card-img align-self-center" src={props.src} alt=""></img>
         <div class="card-body">

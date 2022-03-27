@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { Navigation } from "./index";
 import { connectToExtension } from "../repository";
-import { MDBInput, MDBBtn, MDBIcon} from "mdb-react-ui-kit";
+import { MDBInput, MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 
 function Signin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("");;
 
   const navigate = useNavigate();
 
@@ -39,10 +39,11 @@ function Signin() {
         setUsername("");
         setPassword("");
         setMessage("User logged in successfully");
-        // connectToExtension(resJson.token); 
+        // connectToExtension(resJson.token);
 
         localStorage.setItem("token", resJson.token);
         navigate("/dashboard");
+
       } else {
         setMessage("Some error occured");
       }

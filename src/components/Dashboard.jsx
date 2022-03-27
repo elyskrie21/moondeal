@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
-import { logout } from "../repository";
 import { useNavigate } from "react-router-dom";
+import { isAuthenticated } from "../repository";
 import Product from "./Dashboard_Components/Product";
 import Sidenav from "./Dashboard_Components/Sidenav";
 
@@ -38,19 +38,35 @@ function Dashboard() {
       <div className="row">
         <Sidenav />
 
-        <div className="col-sm p-3 ">
+        <div className="col-10 p-3 ">
           <div className="container">
+
+            <div class="row height d-flex justify-content-center align-items-center">
+              <div class="col-md-12">
+                <div class="search">
+                  {" "}
+                  <i class="fa fa-search"></i>{" "}
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search a product..."
+                  />{" "}
+                  <button class="btn btn-primary">Search</button>{" "}
+                </div>
+              </div>
+            </div>
+
             <div className="row">
-            {data.map((item, i) => {
-              return (
-                <Product
-                  productName={item.productName}
-                  productPrice={item.productPrice}
-                  url={item.url}
-                  src={item.img}
-                />
-              );
-            })}
+              {data.map((item, i) => {
+                return (
+                  <Product
+                    productName={item.productName}
+                    productPrice={item.productPrice}
+                    url={item.url}
+                    src={item.img}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
