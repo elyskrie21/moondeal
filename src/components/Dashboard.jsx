@@ -1,12 +1,9 @@
 import { React, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { isAuthenticated } from "../repository";
 import Product from "./Dashboard_Components/Product";
 import Sidenav from "./Dashboard_Components/Sidenav";
 
 function Dashboard() {
   const [data, setData] = useState([]);
-  const navigate = useNavigate();
 
   const getData = (e) => {
     try {

@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./index.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
-  useLocation,
 } from "react-router-dom";
-import { isAuthenticated } from "./repository";
 import {
   Home,
   SignIN,
@@ -19,10 +16,6 @@ import {
 
 
 function App() {
-  const [auth, setAuth] = useState(() => {
-      const token = localStorage.getItem('token');
-      return token != null; 
-  });
 
   return (
     <Router>
@@ -32,7 +25,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route
           path="/dashboard"
-          element={auth ? <Dashboard /> : <Navigate replace to="/signin" />}
+          element={<Dashboard />}
         />
         <Route path="*" element={<Error />} />
       </Routes>
