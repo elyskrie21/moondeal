@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { logout } from "../../repository";
 import { useNavigate, NavLink } from "react-router-dom";
 
