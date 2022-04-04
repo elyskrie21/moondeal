@@ -41,17 +41,17 @@ function Dashboard() {
         <div className="col-10 p-3 ">
           <div className="container">
 
-            <div class="row height d-flex justify-content-center align-items-center">
-              <div class="col-md-12">
-                <div class="search">
+            <div className="row height d-flex justify-content-center align-items-center">
+              <div className="col-md-12">
+                <div className="search">
                   {" "}
-                  <i class="fa fa-search"></i>{" "}
+                  <i className="fa fa-search"></i>{" "}
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Search a product..."
                   />{" "}
-                  <button class="btn btn-primary">Search</button>{" "}
+                  <button className="btn btn-primary">Search</button>{" "}
                 </div>
               </div>
             </div>

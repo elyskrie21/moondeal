@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { Navigation } from "./index";
-import { connectToExtension } from "../repository";
 import { MDBInput, MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 
 function Signin() {

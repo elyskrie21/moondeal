@@ -1,18 +1,17 @@
 import React from "react";
 
-
 function Product(props) {
   return (
     <div className="col-2 pb-5">
-      <div class="card h-100">
-        <img class="card-img-top card-img align-self-center" src={props.src} alt=""></img>
-        <div class="card-body">
-          <h5 class="card-title text-truncate">{props.productName}</h5>
-          <p class="card-text">
-            {props.productPrice}
+      <div className="card h-100">
+        <img className="card-img-top card-img align-self-center" src={props.src} alt=""></img>
+        <div className="card-body">
+          <h5 className="card-title text-truncate">{props.productName}</h5>
+          <p className="card-text">
+            Saved price: ${props.productPrice}
           </p>
-          <a href={props.url} class="btn btn-primary bottom" target="_blank"  rel="noopener noreferrer">
-            Amazon Link
+          <a href={props.url} className="btn btn-primary bottom" target="_blank"  rel="noopener noreferrer">
+            View Product 
           </a>
         </div>
       </div>

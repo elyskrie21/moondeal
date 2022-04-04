@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { logout } from "../../repository";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 function Sidenav() {
   const navigate = useNavigate();
@@ -12,14 +12,14 @@ function Sidenav() {
               <p className="logo">Moon Deals</p>
           </div>
         <ul className="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto px-3">
-          <li className="nav-item nav-li">
+          <NavLink className="nav-item nav-li" to={'/'}>
             <a
               href="/"
               className="link-dark"
             >
               <p className=""><i className="fa-solid fa-house icon"></i>Products</p>
             </a>
-          </li>
+          </NavLink>
           <li className="nav-li">
             <a
               href="/"
@@ -47,7 +47,7 @@ function Sidenav() {
               navigate("/signin");
             }}
           >
-            <p><i class="fa-solid fa-right-from-bracket icon leave"></i>Sign Out</p>
+            <p><i className="fa-solid fa-right-from-bracket icon leave"></i>Sign Out</p>
           </a>
         </div>
       </div>

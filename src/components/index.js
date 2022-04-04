@@ -5,3 +5,4 @@ export { default as SignIN } from "./Signin";
 export { default as SignUp } from "./Signup"; 
 export { default as Dashboard } from "./Dashboard"; 
 export { default as Error } from "./Error"; 
+export { default as Settings} from './Settings'; 
