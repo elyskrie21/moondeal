@@ -1,64 +1,26 @@
 import React, { useState } from "react";
-import { useNavigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Navigation } from "./index";
 import { MDBInput, MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import { useAuth } from "./AuthProvider";
 
 function Signin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");;
-
-  const navigate = useNavigate();
-
-  let handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      let myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-
-      let urlencoded = new URLSearchParams();
-      urlencoded.append("username", username);
-      urlencoded.append("password", password);
-
-      let requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: urlencoded,
-        redirect: "follow",
-      };
-
-      let res = await fetch(
-        "https://www.api.mymoondeal.com/api/signin",
-        requestOptions
-      );
-
-      let resJson = await res.json();
-      if (resJson.success) {
-        setUsername("");
-        setPassword("");
-        setMessage("User logged in successfully");
-        // connectToExtension(resJson.token);
-
-        localStorage.setItem("token", resJson.token);
-        navigate("/dashboard");
-
-      } else {
-        setMessage("Some error occured");
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  const [message] = useState("");
+  const {onLogin} = useAuth();
 
   return (
     <div className="">
       <Navigation />
       <div className="d-flex align-items-center justify-content-center my-container moon-gradient ">
         <div className="d-flex justify-content-center shadow p-5 bg-light">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={(e) => {
+            e.preventDefault(); 
+            onLogin(username, password);
+            }}>
+        
             <h2 className="fw-bold mb-4 text-center">Sign in </h2>
-
             <MDBInput
               className="mb-4"
               type="text"

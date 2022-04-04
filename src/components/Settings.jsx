@@ -8,7 +8,7 @@ function Settings() {
         <Sidenav />
 
         <div className="col-10 p-3 ">
-          <div className="row"></div>
+          <h1>Account Settings</h1>
         </div>
       </div>
     </div>

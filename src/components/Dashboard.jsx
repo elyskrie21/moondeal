@@ -1,14 +1,15 @@
-import { React, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useAuth } from "./AuthProvider";
 import Product from "./Dashboard_Components/Product";
 import Sidenav from "./Dashboard_Components/Sidenav";
 
 function Dashboard() {
   const [data, setData] = useState([]);
+  const { token } = useAuth();
 
   const getData = (e) => {
     try {
       var myHeaders = new Headers();
-      var token = localStorage.getItem("token");
       myHeaders.append("Authorization", token);
 
       var requestOptions = {
@@ -27,8 +28,8 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    getData();
-  }, []);
+      getData();
+  }, );
 
   return (
     <div>
@@ -37,7 +38,6 @@ function Dashboard() {
 
         <div className="col-10 p-3 ">
           <div className="container">
-
             <div className="row height d-flex justify-content-center align-items-center">
               <div className="col-md-12">
                 <div className="search">
@@ -52,7 +52,6 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-
             <div className="row">
               {data.map((item, i) => {
                 return (

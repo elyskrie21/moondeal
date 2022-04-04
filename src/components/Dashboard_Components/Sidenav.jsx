@@ -1,9 +1,9 @@
 import React from "react";
-import { logout } from "../../repository";
-import { useNavigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useAuth } from "../AuthProvider";
 
 function Sidenav() {
-  const navigate = useNavigate();
+  const {onLogout} = useAuth(); 
 
   return (
     <div className="col-2 sticky-top moon-gradient">
@@ -43,8 +43,7 @@ function Sidenav() {
             className="d-flex align-items-center justify-content-center p-3 link-dark"
             onClick={(e) => {
               e.preventDefault();
-              logout();
-              navigate("/signin");
+              onLogout(); 
             }}
           >
             <p><i className="fa-solid fa-right-from-bracket icon leave"></i>Sign Out</p>
