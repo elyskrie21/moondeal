@@ -11,6 +11,7 @@ import {
   AuthProvider,
   ProtectedRoute,
   PublicRoute,
+  Settings,
 } from "./components";
 
 function App() {
@@ -40,6 +41,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedRoute>
+                <Settings />
               </ProtectedRoute>
             }
           />
