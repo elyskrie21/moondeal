@@ -15,7 +15,7 @@ function Home() {
                 alt=""
               />
             </div>
-            <div className="home-text">
+            <div className="home-text col-lg-5">
               <h1 className="home-title">Welcome to MoonDeal</h1>
               <p className="home-p">
                 MoonDeal is a intuitive solution to online shopping. Our extension

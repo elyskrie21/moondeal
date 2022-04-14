@@ -18,17 +18,8 @@ ul {
 }
 /* Home page */
 .home-text {
-  text-align: left;
-  color: white;
-}
-.home-title {
-  text-decoration: bold;
-}
-.home-p {
-  position: relative;
-  left: -30px;
-  top: 5px;
   text-align: center;
+  color: white;
 }
 
 .nav-li {
