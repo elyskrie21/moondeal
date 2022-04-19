@@ -23,12 +23,9 @@ function Home() {
                 send an email notification out whenever they go on sale.
               </p>
             </div>
-            <div className="col-lg-5">
-              <h1 className="font-weight-light"></h1>
-              <p>
-              </p>
+            <div className="d-text">
+              <h1 className="d-text"></h1>
             </div>
-            
           </div>
         </div>
       </div>

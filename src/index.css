@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  font-family: "Carter One", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 ul {
@@ -17,12 +17,27 @@ ul {
   right: 20px;
 }
 /* Home page */
+.home-title {
+  font-weight: bold;
+}
 .home-text {
+  /* font-family: "Poppins", sans-serif; */
   text-align: center;
   color: white;
+  right: 730px;
+  top: 40px;
 }
-
+.d-text {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  top: 30px;
+}
 .nav-li {
+  text-align: center;
   left: 0px;
 }
 
@@ -33,7 +48,6 @@ ul {
 
 .my-container {
   position: absolute;
-  justify-content: left;
   top: 3.8rem;
   right: 0px;
   bottom: 0px;
