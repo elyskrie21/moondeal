@@ -22,7 +22,7 @@ function Home() {
                 allows you to add your favorite products to our dashboard and we will
                 send an email notification out whenever they go on sale.
               </p>
-              <img src="testimage.jpg" width="400px" height="400px"/>
+              <img className="image" src="testimage.jpg" width="400px" height="400px"/>
             </div>
             <div className="d-text">
               <h1 className="d-text"></h1>
