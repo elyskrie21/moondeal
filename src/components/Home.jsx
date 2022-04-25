@@ -22,7 +22,18 @@ function Home() {
                 allows you to add your favorite products to our dashboard and we will
                 send an email notification out whenever they go on sale.
               </p>
-              <img className="image" src="testimage.jpg" width="400px" height="400px"/>
+              <a href="https://www.google.com/" target="_blank"><button className="download-button">Download MoonDeal</button></a>
+              <p className="testimony">
+                "MoonDeal allows me to get the best deals on my purchases 
+                without having to constantly check my wishlist" - Jessica
+              </p>
+              <p>
+                "Thank you MoonDeal for making it easier to find my
+                favorite products on sale" - Kayla
+              </p>
+            </div>
+            <div className="image col-lg-7">
+              <img className="image" src="Extension-image.png"/>
             </div>
             <div className="d-text">
               <h1 className="d-text"></h1>
