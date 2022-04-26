@@ -12,6 +12,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.red {
+  border: solid red 2px;
+}
+
 ul {
   position: relative;
   right: 20px;
@@ -20,13 +24,7 @@ ul {
 .home-title {
   font-weight: bold;
 }
-.home-text {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  color: white;
-  right: 730px;
-  top: 40px;
-}
+
 .d-text {
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -36,6 +34,7 @@ ul {
   font-size: 30px;
   top: 30px;
 }
+
 .download-button {
   width: 250px;
   height: 50px;
@@ -44,13 +43,7 @@ ul {
   background-color:#9c46f8;
   color: white;
 }
-.image {
-  bottom: 400px;
-  left: 725px;
-}
-.testimony {
-  padding: 50px;
-}
+
 .nav-li {
   text-align: center;
   left: 0px;
@@ -123,6 +116,15 @@ ul {
 .product:focus {
   box-shadow: none;
   border: 2px solid #7719da;
+}
+
+/* Footer */
+#footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+  background:#6cf;
 }
 
 /* *Search Bar */
