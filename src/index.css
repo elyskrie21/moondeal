@@ -12,36 +12,39 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.red {
-  border: solid red 2px;
-}
-
 ul {
   position: relative;
   right: 20px;
 }
 /* Home page */
+
 .home-title {
   font-weight: bold;
+  font-size: 50px;
+  margin-top: 120px;
 }
-
-.d-text {
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
+.home-text{
   font-weight: bold;
-  color: white;
-  font-size: 30px;
-  top: 30px;
+  text-decoration: underline;
+  margin-bottom: 160px;
 }
-
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 50px;
+}
+.gif {
+  align-items: center;
+  width: 650px;
+  height: 350px;
+}
 .download-button {
   width: 250px;
   height: 50px;
   font-size: 20px;
-  border-radius: 45px;
-  background-color:#9c46f8;
-  color: white;
+  border-radius: 5px;
+  background-color:white;
+  color: black;
 }
 
 .nav-li {
