@@ -16,38 +16,72 @@ ul {
   position: relative;
   right: 20px;
 }
+
+p {
+  font-size: 20px;
+}
+
 /* Home page */
+
+.line {
+  border: 2px solid red;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.child {
+  position: relative;
+  padding: 2rem;
+}
 
 .home-title {
   font-weight: bold;
-  font-size: 60px;
-  margin-top: 120px;
+  font-size: 4rem;
 }
+
 .home-text{
   font-weight: bold;
-  text-decoration: underline;
-  margin-bottom: 160px;
+  font-size: 2rem;
 }
+
 .title {
   font-weight: bold;
-  font-size: 30px;
-  margin-top: 50px;
+  font-size: 2.4rem;
 }
-.a-logo {
-  width:350px;
-  height: 100px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+
+.i-text {
+  font-size: 2rem;
 }
-.e-logo {
-  width:300px;
-  height:100px;
+
+.off-text {
+  color: black;
 }
+
+.hlogo {
+  object-fit: contain;
+  width: 20rem;
+  max-height: 150px;
+  margin: 20px;
+}
+
 .gif {
   align-items: center;
   width: 650px;
   height: 350px;
 }
+
+.small-gif {
+  align-items: center;
+  width: 520px;
+  height: 280px;
+}
+
 .download-button {
   width: 250px;
   height: 50px;
@@ -56,10 +90,12 @@ ul {
   background-color:white;
   color: black;
 }
+
 .p-photo {
-  width: 220px;
-  height: 150px;
+  max-width: 100%; 
+  height: 150px; 
 }
+
 .nav-li {
   text-align: center;
   left: 0px;
@@ -68,6 +104,19 @@ ul {
 .moon-gradient {
   background-color: #cbdcef;
   background-image: linear-gradient(210deg, #cbdcef 0%, #7719da 100%);
+}
+
+.purple {
+  background-color: #7719da;
+}
+
+.blue {
+  background-image: linear-gradient(170deg, white 20%, #cbdcef 80%);
+}
+
+.home-gradient {
+  background-color: #cbdcef;
+  background-image: linear-gradient(200deg, #cbdcef 30%, #7719da 100%);
 }
 
 .my-container {
@@ -132,15 +181,6 @@ ul {
 .product:focus {
   box-shadow: none;
   border: 2px solid #7719da;
-}
-
-/* Footer */
-#footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:60px;   /* Height of the footer */
-  background:#6cf;
 }
 
 /* *Search Bar */

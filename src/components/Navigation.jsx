@@ -13,11 +13,12 @@ function Navigation() {
   const { token } = useAuth();
 
   return (
-    <div className="navigation">
+    <div className="navigation sticky-top">
       <MDBNavbar light bgColor="light" className="p-10 gap-3 ">
         <MDBContainer fluid>
           <MDBNavbarBrand tag="span" className="mb-0 h1">
             <NavLink className="navbar-brand" to="/">
+              <img src="icon_32.png" alt="" />
               MoonDeal
             </NavLink>
           </MDBNavbarBrand>
